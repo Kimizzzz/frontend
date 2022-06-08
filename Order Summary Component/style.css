@@ -1,0 +1,139 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+:root{
+    --pale-blue:hsl(225, 100%, 94%);
+    --bright-blue:hsl(245, 75%, 52%);
+    --very-pale-blue:hsl(225, 100%, 98%);
+    --desaturated-blue:hsl(224, 23%, 55%);
+    --dark-blue:hsl(223, 47%, 23%);
+    --active-state:#766cf1;
+}
+
+body{
+    height:100vh;
+    background-image:url(images/pattern-background-desktop.svg);
+    background-color: var(--pale-blue);
+    background-repeat: no-repeat;
+    background-size:contain;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color:#fff;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    height:auto;
+    width:22rem;
+    border-radius:20px;
+}
+
+.hero{
+    width:inherit;
+    border-radius:20px 20px 0 0;
+    margin-bottom:1em;
+}
+
+h1{
+    font-weight:900;
+    font-size: 1.3em;
+    margin:0.5em;
+    color:var(--dark-blue)
+}
+
+.info{
+    text-align: center;
+    color:var(--desaturated-blue);
+    font-size:0.8em;
+    font-weight:700;
+    line-height:1.5;
+    margin:0 3em 1em 3em;
+}
+
+.payment{
+    background-color: var(--very-pale-blue);
+    margin:1em auto;
+    width:65%;
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:1.2em;
+    border-radius: 8px;
+}
+
+.payment-details{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    width:55%;
+}
+
+
+.plan{
+    text-align: center;
+    font-size:.7em;
+}
+
+.annual-plan{
+    font-weight:900;
+    color:var(--dark-blue)
+}
+
+.price{
+    color:var(--desaturated-blue)
+}
+
+a{
+    font-size:.8em;
+    font-weight:900;
+    text-decoration: none;
+}
+
+a:hover{
+    color:var(--active-state)
+}
+
+.proceed{
+    background-color: var(--bright-blue);
+    color:#fff;
+    width:75%;
+    font-weight:700;
+    font-size:0.8em;
+    padding:0.9em 0;
+    border:none;
+    border-radius: 8px;
+    margin:0.5em 0;
+    box-shadow: 0 0.7em 0.6em 0.4em var(--pale-blue);
+    transition: 300ms;
+}
+
+.proceed:hover{
+    background-color:var(--active-state);
+    cursor: pointer;
+}
+
+.cancel{
+    margin:1.3em 0 2em 0;
+    color:var(--desaturated-blue);
+    font-weight:900;
+    font-size:0.8em;
+    cursor: pointer;
+}
+
+.cancel:hover{
+    color:var(--dark-blue)
+}
+
+@media(max-width:375px){
+    .container{
+        width:80vw;
+    }
+}
